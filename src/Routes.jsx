@@ -9,7 +9,7 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(
-  "pk_test_51QERYyL1uqahjXCLjem3JCxSXggXXa5IuPbQ39lx8MEWygA4CdCvHL6z3XIb3an0mGuwfKnPlXet93kdiJNnBrpP00wrhcNSZB"
+  "pk_test_51RUygz2fhzpI1Ev6plChasKOcgd9lcKhXKooHoihtE9A3tp84fniUGnsAhtft5Wvbn3dJy33zwJz6jiXOGwI6u0200y8jpZcjf"
 );
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 const AppRouter = () => {
