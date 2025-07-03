@@ -13,36 +13,42 @@ const stripePromise = loadStripe(
 );
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+
 const AppRouter = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/auth" element={<Auth />} />
-      <Route
-        path="/payments"
-        element={
-          <ProtectedRoute msg={"You must login to pay"} redirect={"/payments"}>
-            <Elements stripe={stripePromise}>
-              <Payment />
-            </Elements>
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/orders"
-        element={
-          <ProtectedRoute
-            msg={"You must login to see your orders"}
-            redirect={"/orders"}
-          >
-            <Orders />
-          </ProtectedRoute>
-        }
-      />
-      <Route path="/category/:categoryName" element={<Results />} />
-      <Route path="/products/:id" element={<ProductDetail />} />
-      <Route path="/cart" element={<Cart />} />
-    </Routes>
+    <Router basename="/Amazon-Front-End/">
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route
+          path="/payments"
+          element={
+            <ProtectedRoute
+              msg={"You must login to pay"}
+              redirect={"/payments"}
+            >
+              <Elements stripe={stripePromise}>
+                <Payment />
+              </Elements>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <ProtectedRoute
+              msg={"You must login to see your orders"}
+              redirect={"/orders"}
+            >
+              <Orders />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/category/:categoryName" element={<Results />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </Router>
   );
 };
 
