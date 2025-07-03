@@ -1,6 +1,7 @@
 {
-  "name": "amazon",
+  "name": "amazon-frontend",
   "private": true,
+  "homepage": "https://codetricker.github.io/Amazon-Front-End/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
