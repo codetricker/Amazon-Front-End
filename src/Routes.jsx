@@ -11,6 +11,7 @@ import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(
   "pk_test_51RUygz2fhzpI1Ev6plChasKOcgd9lcKhXKooHoihtE9A3tp84fniUGnsAhtft5Wvbn3dJy33zwJz6jiXOGwI6u0200y8jpZcjf"
 );
+
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 const AppRouter = () => {
   return (
