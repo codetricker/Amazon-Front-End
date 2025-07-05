@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Amazon-Front-End/", // Correct for repo-name deployment :contentReference[oaicite:1]{index=1}
+  baseURL: "https://amazon-back-end-k90i.onrender.com", // Correct for repo-name deployment :contentReference[oaicite:1]{index=1}
 });

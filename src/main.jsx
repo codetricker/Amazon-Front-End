@@ -9,7 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <DataProvider reducer={reducer} initialState={initialState}>
-      <BrowserRouter basename="/Amazon-Front-End">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </DataProvider>
