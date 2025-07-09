@@ -12,6 +12,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/", // ✅ Critical for correct asset paths in deployment
+  // base: "/", // ✅ Critical for correct asset paths in deployment
   plugins: [react()],
 });
